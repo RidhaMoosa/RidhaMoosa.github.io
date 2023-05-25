@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="sign-up-styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container">
+          
+          <ul class="nav-links">
+            <a href="landing-page.html" class="logo">Prepic.io</a>
+            <li><a href="#">WAPT</a></li>
+            <li><a href="/Landing page/sign-up-page.html">Sign up</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+  <main>
+    <section class="signup-section">
+      <div class="container">
+        <h2>Join the waiting list</h2>
+        <p class="form-description">We will use these answers for communication purposes only.<br>No information will be shared with third parties other than Prepic.io (operating under Nandetech Consulting (Pty) Ltd)</p>
+
+        <form class="signup-form" action="#" method="POST">
+            <label for="consent">Do you consent to us storing and using your information for communication purposes only?</label>
+            <div class="radio-group">
+              <input type="radio" id="consent-yes" name="consent" value="yes">
+              <label for="consent-yes">Yes</label>
+              <input type="radio" id="consent-no" name="consent" value="no">
+              <label for="consent-no">No</label>
+            </div>
+            
+            <!-- Additional Questions (Initially hidden) -->
+            <div id="additional-questions" style="display: none;">
+
+                <label for="first-name">Your first name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+      
+                <label for="surname">Your surname *</label>
+                <input type="text" id="surname" name="surname" required>
+      
+                <label for="email">Your email address *</label>
+                <input type="email" id="email" name="email" required>
+      
+                <label for="mobile-number">Your mobile number</label>
+                <input type="tel" id="mobile-number" name="mobile-number">
+      
+                <div class="location-group">
+                    <label for="location">In which city and country are you located?</label>
+                    <input type="text" id="location" name="location" placeholder="Search for location">
+                </div>
+
+                <label for="studying-wapt">Are you studying for the WAPT for the year 2023?</label>
+                <div class="radio-group">
+                  <input type="radio" id="studying-yes" name="studying-wapt" value="yes" required>
+                  <label for="studying-yes">Yes</label>
+                  <input type="radio" id="studying-no" name="studying-wapt" value="no">
+                  <label for="studying-no">No</label>
+                </div>
+                <br>
+                <br>
+      
+      
+                <label for="interest-features">Which of these features would you be most interested in?</label>
+                <select id="interest-features" name="interest-features" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option value="multiple-choice">Multiple choice questions</option>
+                  <option value="notes">Generating and creating notes</option>
+                  <option value="peers">Connecting with peers studying for the same examinations</option>
+                </select>
+                <br>
+      
+                <label for="important-to-you">Which of these are MOST important to you?
+                </label>
+      
+                <br>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="important-db" name="important-to-you[]" value="database">
+                  <label for="important-db">A large database of multiple choice questions to practice</label><br>
+                  <input type="checkbox" id="important-explanations" name="important-to-you[]" value="explanations">
+                  <label for="important-explanations">Explanations to answers in multiple choice questions</label><br>
+                  <input type="checkbox" id="important-notes" name="important-to-you[]" value="notes">
+                  <label for="important-notes">Ability to make notes and flash cards for studying</label><br>
+                  <input type="checkbox" id="important-help" name="important-to-you[]" value="help">
+                  <label for="important-help">Asking experts and artificial intelligence for help on a topic</label><br>
+                  <input type="checkbox" id="important-events" name="important-to-you[]" value="events">
+                  <label for="important-events">Access to events around my subject</label>
+                </div>
+                <br>
+                <br>
+                <label for="least-important">Which of these are LEAST important to you?</label>
+                <br>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="least-db" name="least-important[]" value="database">
+                  <label for="least-db">A large database of multiple choice questions to practice</label><br>
+                  <input type="checkbox" id="least-explanations" name="least-important[]" value="explanations">
+                  <label for="least-explanations">Explanations to answers in multiple choice questions</label><br>
+                  <input type="checkbox" id="least-notes" name="least-important[]" value="notes">
+                  <label for="least-notes">Ability to make notes and flash cards for studying</label>br
+                  <input type="checkbox" id="least-help" name="least-important[]" value="help">
+                  <label for="least-help">Asking experts and artificial intelligence for help on a topic</label><br>
+                  <input type="checkbox" id="least-events" name="least-important[]" value="events">
+                  <label for="least-events">Access to events around my subject</label>
+                </div>
+                <br>
+                <br>
+      
+                <label for="subjects">What subjects are you currently studying and would like to see on this platform?</label>
+                <textarea id="subjects" name="subjects" rows="4" required></textarea>
+      
+                <label for="marketing-consent">I consent to allow prepic.io to send and receive emails for marketing purposes</label>
+                <div class="radio-group">
+                  <input type="radio" id="marketing-yes" name="marketing-consent" value="yes" required>
+                  <label for="marketing-yes">Yes</label>
+                  <input type="radio" id="marketing-no" name="marketing-consent" value="no">
+                  <label for="marketing-no">No</label>
+                </div>
+      
+                <button type="submit">Submit</button>
+            </div>
+            
+          </form>
+        </div>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content from the landing page -->
+  </footer>
+
+  <script src="suscript.js"></script>
+    <!-- Include Algolia Places library -->
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.11.0/dist/cdn/places.min.js"></script>
+
+
+ </body>
+</html>

@@ -1,0 +1,257 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  
+  header {
+    background-color: #FF9A00;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: transparent;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  
+  .hero {
+    background: linear-gradient(to right, #FF9A00, #dc5800);
+    background-size: 200% auto;
+    animation: gradientAnimation 5s ease infinite;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-right: 2rem;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: left;
+    margin-right: 2rem;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ddd;
+  }
+  
+
+/* Description Section */
+.description {
+  background: linear-gradient(135deg, #FF9A00 0%, #dc5800 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 50px 0;
+  margin: 50px 50px;
+}
+
+.description .container {
+  max-width: 800px;
+  margin: 5px auto;
+  padding: 20px ;
+}
+
+.description h2 {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+} 
+
+.description h3 {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.animate-character
+{
+
+  background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #000000 29%,
+    #5e4707 67%,
+    #9f3a00 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 7s linear infinite;
+  display: inline-block;
+      font-size: 20px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+  /* Features Section */
+  
+  .features {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(to right, #FF9A00, #dc5800);
+    background-size: 200% auto;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  
+  .features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .feature {
+    margin-bottom: 40px;
+  }
+  
+  .feature img {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    color: #303030;
+  }
+  .feature img {
+    float: bottom;
+    width: 70%;
+    height: auto;
+    padding: 10px 10px;
+    margin: 15px;
+    
+}
+
+
+
+  
+  /* Testimonial Section */
+  
+  .testimonial {
+    background-color: #f7f7f7;
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .testimonial h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-card {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-card img {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card h4 {
+    font-size: 18px;
+  }
+  
+  /* Footer */
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  

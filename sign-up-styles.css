@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #FF9A00, #dc5800);
+  background-size: 200% auto;
+  animation: gradientAnimation 5s ease infinite;
+  text-align: center;
+  color: #fff;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+  background-color: #FF9A00;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 12px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Sign Up Form Styles */
+.signup-section {
+  background-color: #fff;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 12px;
+  margin-bottom: 50px;
+}
+
+.signup-section h2 {
+  font-size: 24px;
+  color: #FF9A00;
+  margin-bottom: 20px;
+}
+
+.form-description {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form select,
+.signup-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.signup-form select {
+  height: 40px;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+  display: none;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.radio-group label::before,
+.checkbox-group label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.radio-group input[type="radio"]:checked + label::before,
+.checkbox-group input[type="checkbox"]:checked + label::before {
+  background-color: #FF9A00;
+  border-color: #FF9A00;
+}
+
+button[type="submit"] {
+  background-color: #FF9A00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #FFDEAD;
+}
+
+
