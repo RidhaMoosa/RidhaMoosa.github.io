@@ -416,16 +416,52 @@
                     metalness: 0.1
                 });
 
+                // Material for white shards (use string color for reliability)
+                const whiteMaterial = new THREE.MeshStandardMaterial({
+                    color: '#f5f2f1',
+                    roughness: 0.7,
+                    metalness: 0.1
+                });
+
+                // Shuffle an array of indices to randomize white shard placement
+                function shuffle(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                    return array;
+                }
+                const indices = shuffle([...Array(shardCount).keys()]);
+                const whiteIndices = new Set(indices.slice(0, 6)); // 6 white shards
+                const bgIndices = new Set(indices.slice(6, 12)); // 6 background shards
+
+                // Render main layer (chromatic/bg/white mixed)
                 for (let i = 0; i < shardCount; i++) {
-                    const isBgShard = i < 5; // First 5 shards will be background-colored
-                    const material = isBgShard ? bgMaterial : chromaticMaterial;
+                    let material;
+                    if (whiteIndices.has(i)) {
+                        material = chromaticMaterial; // Use chromatic for main layer
+                    } else if (bgIndices.has(i)) {
+                        material = bgMaterial;
+                    } else {
+                        material = chromaticMaterial;
+                    }
                     const shard = new THREE.Mesh(geometry, material);
-                    
                     shard.position.set( (Math.random() - 0.5) * 40, (Math.random() - 0.5) * 25, (Math.random() - 0.5) * 30 - 20 );
                     shard.rotation.set( Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI );
                     shard.userData.initialPos = shard.position.clone();
                     shard.userData.scrollFactor = 0.5 + Math.random() * 2;
-                    shard.userData.isBg = isBgShard;
+                    scene.add(shard);
+                    shards.push(shard);
+                }
+
+                // Render white shards as a second (foreground) layer
+                const whiteShardGeometry = new THREE.BoxGeometry(0.3, 5, 2);
+                for (let i = 0; i < 6; i++) {
+                    const shard = new THREE.Mesh(whiteShardGeometry, whiteMaterial);
+                    shard.position.set( (Math.random() - 0.5) * 40, (Math.random() - 0.5) * 25, (Math.random() - 0.5) * 30 - 10 ); // z is closer
+                    shard.rotation.set( Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI );
+                    shard.userData.initialPos = shard.position.clone();
+                    shard.userData.scrollFactor = 0.5 + Math.random() * 2;
                     scene.add(shard);
                     shards.push(shard);
                 }
@@ -769,3 +805,4 @@
     </script>
 </body>
 </html>
+
